@@ -1,0 +1,45 @@
+<?php
+    session_start();
+//if session was destroy in log out page we need to do login again.
+    if (!isset($_SESSION['uname'])) {
+        header("location: Login.php");
+    }
+
+
+?>
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+    <h1>Give Hotel information</h1>
+
+
+    <form>
+    <fieldset style="width: 350px">
+        <legend>Remove a hotel!!!!!!</legend>
+    <table align="center">
+
+        <tr>
+            <td>Remove Bracnch:</td>
+            <td>
+                <input type="checkbox" name="">Hotel 1
+                <input type="checkbox" name="">Hotel 2
+                <input type="checkbox" name="">Hotel 3
+                <input type="checkbox" name="">Hotel 4
+            </td>
+        </tr>
+
+        <tr>
+            <td></td>
+            <td></br>
+                <input type="submit" name="" value="Remove">
+              
+            </td>
+        </tr>
+    </table>
+    </fieldset>
+    </form>
+</body>
+</html>
